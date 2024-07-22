@@ -54,7 +54,6 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
-/* Toggle Button Styles */
 .toggle-container {
     position: absolute;
     top: 10px;
@@ -174,7 +173,6 @@ body.dark .toggle::before {
     
     .content-wrapper {
         max-height: 30vh;
-        /* Adjust this height as needed */
         overflow-y: auto;
         scrollbar-width: thin;
         scrollbar-color: var(--primary-color) var(--background-color);
@@ -226,7 +224,6 @@ footer a {
     font-size: 2em;
     border-radius: 10vw;
         position: relative;
-        /* Add relative positioning for pseudo-element */
 }
 
 footer a:hover {
@@ -234,7 +231,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Circular hover animation */
 @property --fill {
     syntax: '<percentage>';
     inherits: true;

@@ -18,7 +18,7 @@ document.querySelectorAll('.content-sections li').forEach(item => {
             sectionContentDiv.style.display = 'block';
             document.querySelectorAll('.section-content p').forEach(p => {
                 p.classList.add('hidden');
-                p.innerHTML = p.textContent; // Reset content to plain text without span
+                p.innerHTML = p.textContent; 
             });
             document.querySelectorAll('.content-sections li').forEach(li => {
                 li.classList.remove('active');
@@ -29,8 +29,6 @@ document.querySelectorAll('.content-sections li').forEach(item => {
             line.style.transition = 'transform 1s ease-in-out';
             line.style.transform = 'translateY(-2vh)';
             sectionContentDiv.classList.add('show');
-
-            // Apply typewriter effect
             typewriterEffect(content);
         }
     });
@@ -55,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function typewriterEffect(element) {
     const text = element.textContent;
-    element.innerHTML = ''; // Clear the content
+    element.innerHTML = ''; 
     element.style.visibility = 'visible';
 
     let i = 0;
@@ -72,15 +70,14 @@ function typewriterEffect(element) {
                 currentLine.innerHTML += text.charAt(i);
             }
             i++;
-            element.parentNode.scrollTop = element.parentNode.scrollHeight; // Scroll to the bottom
-            setTimeout(type, 20); // Adjust typing speed here (in milliseconds)
+            element.parentNode.scrollTop = element.parentNode.scrollHeight; 
+            setTimeout(type, 20);
         } else {
-            currentLine.classList.remove('typewriter-text'); // Remove the blinking cursor class
+            currentLine.classList.remove('typewriter-text'); 
         }
-        // Remove blinking cursor class from all spans except the last one
         const spans = element.querySelectorAll('span');
         spans.forEach(span => span.classList.remove('typewriter-text'));
-        currentLine.classList.add('typewriter-text'); // Add blinking cursor to the last span
+        currentLine.classList.add('typewriter-text'); 
     }
     type();
 }
